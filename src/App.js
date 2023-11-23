@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import Dashboard from "./dashboard/pages/home";
 import NoPage from "./pages/NoPage";
 import whatsap from "./assets/image/whatsap.svg";
 export default function App() {
@@ -52,6 +53,7 @@ const openWhatsAppChat = () => {
         <Route index element={<Home />} />
         <Route path="*" element={<NoPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,0 +1,56 @@
+.navbar{
+    display: flex ;
+    justify-content: space-between;
+    background-color: rgb(255, 153, 0);
+    color:white;
+    padding: 1rem 3rem 3rem 3rem;
+
+}
+.logoArea{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size:2rem;
+    font-weight: bold;
+}
+
+.profile{
+    display: flex;
+    gap:10px;
+    background-color: orange;
+    color:white;
+    font-weight: bold;
+    border:none;
+    padding:10px;
+}
+.profile:hover{
+    background-color: white;
+    color:orange;
+    border:none;
+}
+.profileDropdownToggle{
+    background-color: orange;  
+    color:white;
+    border:none
+}
+.profileDropdownToggle:hover{
+    background-color: orange;  
+}
+.profileImg{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:2px solid white;
+}
+.username{
+    margin-top:10px;
+}
+.dropdownItem{
+    font-weight: 600;
+    opacity: 70%;
+}
+.dropIcon{
+    color:orange;
+    padding-right:3px;
+    font-weight:bolder;
+}

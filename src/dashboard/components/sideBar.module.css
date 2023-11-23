@@ -1,0 +1,49 @@
+.sidebar{
+    width:20vw;
+    border-right: 1px solid grey;
+    min-height: 95vh;
+    max-height:auto;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    justify-content: space-between;
+    font-size: 1rem; 
+    font-weight: 700;
+    opacity: 60%;
+    background-color: transparent;
+    border:none
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    color:grey;
+    padding-top: 1rem;
+    margin-left: 2rem;
+    width:50%;
+    justify-content: space-between;
+    font-size: 0.875rem; 
+    background-color: transparent;
+    border:none
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+     justify-content: flex-end;
+  }
+  .footer{
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    margin-top: 45vh;
+    color:grey;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: flex-end;
+  }
+  .dropdownIcon{
+    rotate:60deg
+  }

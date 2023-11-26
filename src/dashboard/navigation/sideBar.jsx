@@ -1,17 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBarButton from "../components/sideBarItem";
- const SideBar = () => {
+import { useSelector } from "react-redux";
+import { Links } from "./Links";
+const SideBar = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const  [activeMenu,setActiveMenu] = useState("");
+  const  [activeSubMenu,setActiveSubMenu] = useState("");
+  const minimize = useSelector((state) => state.sidebar.minimize);
   return (
-    <div className="w-[17vw] border-r-2 border-gray-300 min-h-screen flex flex-col justify-between py-[5vh]
-    ] ">
+    <div
+      className={`${
+        minimize ? "w-fit" : "w-[18vw]"
+      } border-r-2 border-gray-300 flex flex-col justify-between h-full  py-[5vh]
+    `}
+    >
       <div className="flex flex-col">
-      <SideBarButton label="Dashboard" dropDownIcon={<i class={`bi bi-caret-down-fill`}></i>} icon={<i class="bi bi-columns-gap"></i>}/>
-      <SideBarButton label="Restourant" dropDownIcon={<i class="bi bi-caret-down-fill"></i>} icon={<i class="bi bi-house"></i>}/>
-      <SideBarButton label="Drivers" dropDownIcon={<i class="bi bi-caret-down-fill"></i>} icon={<i class="bi bi-bicycle"></i>}/>
+        {Links.map((link) => (
+          <SideBarButton
+            key={link.id}
+            label={link.label}
+            icon={link.icon}
+            childLinks={link.adjacentLinks}
+            clicked={isClicked === link.id}
+            linkId={link.id}
+            path={link.path}
+            activeMenu={activeMenu}
+            setIsClicked={setIsClicked}
+            setActiveMenu={setActiveMenu}
+            setActiveSubMenu={setActiveSubMenu}
+            activeSubMenu={activeSubMenu}
+          />
+        ))}
       </div>
-      <div className="mx-[1vw] mb-[2vh] text-gray-400 font-sans"> 
-        <b className="text-base">Food Desk - Online Food Delivery Admin Dashboard</b>
-        <p className="text-base">&copy; 2022 All Rights Reserved</p>
+      <div
+        className={`mx-[2vw] text-gray-400 font-sans ${
+          minimize ? "hidden" : "block"
+        }`}
+      >
+        <b className="text-sm">
+          Food Desk - Online Food Delivery Admin Dashboard
+        </b>
+        <p className="text-sm">&copy; 2022 All Rights Reserved</p>
       </div>
     </div>
   );

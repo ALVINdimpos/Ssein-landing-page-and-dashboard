@@ -2,7 +2,18 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
+import FoodOrder from "./dashboard/pages/foodOrder";
+import OrdersHistory from "./dashboard/pages/orderHistory";
 import Dashboard from "./dashboard/pages/home";
+import Message from "./dashboard/pages/message";
+import Billing from "./dashboard/pages/billing";
+import Setting from "./dashboard/pages/settings";
+import Restourant from "./dashboard/pages/retourant";
+import FoodMenu from "./dashboard/pages/menu";
+import Orders from "./dashboard/pages/driversOrder";
+import Reviews from "./dashboard/pages/reviews";
+import Drivers from "./dashboard/pages/drivers";
+import FeedBacks from "./dashboard/pages/driversFeedback";
 import NoPage from "./pages/NoPage";
 import whatsap from "./assets/image/whatsap.svg";
 export default function App() {
@@ -54,6 +65,19 @@ const openWhatsAppChat = () => {
         <Route path="*" element={<NoPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/food-order" element={<FoodOrder />} />
+        <Route path="/dashboard/order-history" element={<OrdersHistory/>} />
+        <Route path="/dashboard/restourant/orders" element={<OrdersHistory/>} />
+        <Route path="/dashboard/message" element={<Message />} />
+        <Route path="/dashboard/bill" element={<Billing />} />
+        <Route path="/dashboard/setting" element={<Setting />} />
+        <Route path="/dashboard/restourant" element={<Restourant/>} />
+        <Route path="/dashboard/restourant/menu" element={<FoodMenu />} />
+        <Route path="/dashboard/restourant/orders" element={<FoodOrder />} />
+        <Route path="/dashboard/drivers/orders" element={<Orders />} />
+        <Route path="/dashboard/restourant/reviews" element={<Reviews />} />
+        <Route path="/dashboard/drivers" element={<Drivers />} />
+        <Route path="/dashboard/drivers/feedbacks" element={<FeedBacks/>} />
       </Routes>
     </BrowserRouter>
   );

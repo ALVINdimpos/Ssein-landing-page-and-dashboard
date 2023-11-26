@@ -34,16 +34,6 @@
     flex-direction: column;
      justify-content: flex-end;
   }
-  .footer{
-    display: flex;
-    gap:20px;
-    flex-direction: column;
-    margin-top: 45vh;
-    color:grey;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    justify-content: flex-end;
-  }
   .dropdownIcon{
     rotate:60deg
   }

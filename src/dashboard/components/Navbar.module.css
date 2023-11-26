@@ -1,11 +1,4 @@
-.navbar{
-    display: flex ;
-    justify-content: space-between;
-    background-color: rgb(255, 153, 0);
-    color:white;
-    padding: 1rem 3rem 3rem 3rem;
 
-}
 .logoArea{
     display:flex;
     flex-direction: row;
@@ -21,11 +14,12 @@
     color:white;
     font-weight: bold;
     border:none;
+    border-color: 'transparent';
     padding:10px;
+    outline: none;
 }
 .profile:hover{
-    background-color: white;
-    color:orange;
+    color:white;
     border:none;
 }
 .profileDropdownToggle{
